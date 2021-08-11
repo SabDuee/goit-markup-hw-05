@@ -144,7 +144,7 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
-.filter-item:not(:last-child) {
+.filter-container:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -157,6 +157,7 @@ img {
 .filter-item {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 
 .our-command-bg {
@@ -235,6 +236,7 @@ img {
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 
 .our-team {
@@ -292,6 +294,10 @@ img {
 .current {
   list-style-type: none;
 }
+.navigation-link.current {
+  position: relative;
+}
+
 .current.current {
   color: var(--color-hover--);
 }
@@ -324,12 +330,6 @@ img {
   padding: 6px 22px;
 }
 
-.filter-text {
-  color: var(--color-black--);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .filter-text:focus,
 .filter-text:hover {
   background: #2196f3;
@@ -361,7 +361,7 @@ img {
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  transition-property: color;
 }
 
 .navigation-link:hover,
@@ -445,6 +445,7 @@ img {
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -520,6 +521,10 @@ footer {
   padding: 12px;
   color: #afb1b8;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  transition-property: color, background-color;
 }
 .team-icon {
   fill: currentColor;
@@ -531,12 +536,8 @@ footer {
 .team-iteam:focus {
   background: #2196f3;
   color: #ffffff;
-  border-radius: 50%;
 }
-.team-iteam {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .client-link {
   display: block;
   width: 170px;
@@ -563,6 +564,7 @@ footer {
 .client-link {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 .footer-container {
   display: flex;
@@ -599,6 +601,7 @@ footer {
 .portfolio-work-link {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
 }
 .product-thumb {
   position: relative;
@@ -612,6 +615,7 @@ footer {
 .flex-element {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
 }
 .product-thumb-container {
   position: absolute;
@@ -627,6 +631,7 @@ footer {
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .product:hover .product-thumb-container {
@@ -652,6 +657,7 @@ footer {
   opacity: 1;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .backdrop.is-hidden .modal {
@@ -677,6 +683,7 @@ footer {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition-property: background-color, box-shadow;
 }
 .modal-button-box {
   position: relative;
@@ -696,4 +703,7 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+}
+button {
+  cursor: pointer;
 }
